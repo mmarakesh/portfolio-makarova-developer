@@ -1,101 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--
-      This is the page head - it contains info the browser uses to display the page
-      You won't see what's in the head in the page
-      Scroll down to the body element for the page content
-    -->
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
-    <title>Hello World!</title>
-
-    <!-- Meta tags for SEO and social sharing -->
-    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-    <meta
-      name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Hello World!" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-    <meta
-      property="og:description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta
-      property="og:image"
-      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
-    />
-    <meta name="twitter:card" content="summary" />
-
-    <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-
-    <!-- Import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    <!--
-      This is the body of the page
-      Look at the elements and see how they appear in the rendered page on the right
-      Each element is defined using tags, with < and > indicating where each one opens and closes
-      There are elements for sections of the page, images, text, and more
-      The elements include attributes referenced in the CSS for the page style
-    -->
-
-    <!-- The wrapper and content divs set margins and positioning -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <!-- This is the start of content for our page -->
-        <h1 class="title">Hello World!</h1>
-
-        <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <!-- Instructions on using this project -->
-        <div class="instructions">
-          <h2>
-            Using this project
-          </h2>
-          <p>
-            This is the Glitch <strong>Hello Website</strong> project. You can
-            use it to build your own site. Check out README.md in the editor for
-            more info and next steps you can take!
-          </p>
-          <!-- ADD BUTTON HERE -->
-          
-          <!-- Once you've added the button from the readme, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
-        </div>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <link rel="stylesheet" href="aos.css">
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <header>
+         <div class="collapse bg-light" id="navbarHeader">
+            <div class="container">
+               <div class="row">
+                  <div class="formBox col-sm-8 col-md-7 py-4">
+                     <form action="https://formspree.io/f/mnqreono" method="post">
+                        <input type="hidden" name="_language" value="en">
+                        <div class="headin">
+                           <label for="email">Your Email:
+                           <input type="email" class="text-input" name="_replyto" placeholder="Your email..." required="">
+                           </label>
+                        </div>
+                        <div class="headin">
+                           <label>
+                           Your message:
+                           <textarea class="text-input" name="message" placeholder="Type your message..." required=""></textarea>
+                           </label>
+                        </div>
+                        <br>
+                        <div class="headin" data-aos="flip-left">
+                           <button class="btnSubmit" type="submit">Send</button>
+                        </div>
+                     </form>
+                     <img class="card" src="https://cdn.glitch.global/fb205773-9bd9-41e6-97d4-e2b4c3f811da/card1.png?v=1670863677291" alt="" width="300px">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="navbar navbar-light bg-light shadow-sm">
+            <div class="container">
+               <a href="https://www.linkedin.com/in/marina-makarova-b571a2247/" class="navbar-brand" target="_blank">
+                  <svg class="contact" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                     <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                  </svg>
+               </a>
+               <a href="https://github.com/mmarakesh" class="navbar-brand" target="_blank">
+                  <svg class="contact" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                  </svg>
+               </a>
+               <a href="https://t.me/+38268552873" class="navbar-brand me-auto" target="_blank">
+                  <svg class="contact" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                  </svg>
+               </a>
+               <button class="about bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="circle"></div>
+                  <span class="text-dark btnContact"> Contact me </span>
+               </button>
+            </div>
+         </div>
+      </header>
+      <section id="up">
+         <div class="head">
+            <img class="photoOne" src="https://cdn.glitch.global/fb205773-9bd9-41e6-97d4-e2b4c3f811da/me.jpg?v=1670863716986" alt="me" width="400px" height="400px">
+            <div id="aboutMe">
+               <p class="textOne">Hello,</p>
+               <p class="textOne">I am<span class="myName"> Marina Makarova.</span></p>
+               <p class="textOne"><img src="https://cdn.glitch.global/fb205773-9bd9-41e6-97d4-e2b4c3f811da/heart11.png?v=1670863694270" alt="" width="50">
+                 I am 
+                 <span class="text"></span>
+                 <img src="https://cdn.glitch.global/fb205773-9bd9-41e6-97d4-e2b4c3f811da/heart55.png?v=1670863698434" alt="" width="50"></p>
+               <br>
+               <hr>
+               <br>
+               <div class="skills">
+                  <h1>My creative skills & experiences.</h1>
+                  <p> <span class="languages">Languages:</span> <span class="html 
+                     boxes">HTML-5</span> <span class="css 
+                     boxes">CSS-3</span> <span class="js 
+                     boxes">JavaScript</span> <span class="react 
+                     boxes">React</span></p>
+                  <p> <span class="languages">Libraries & frameworks:</span> <span class="bstrap 
+                     boxes">Bootstrap5</span>  <span class="gsap 
+                     boxes">GSAP</span>  <span class="figma 
+                     boxes">Figma</span> </p>
+               </div>
+            </div>
+         </div>
+      </section>
+     
+     <!-- cursor -->
+      <div class="mouse-cursor cursor-outer"></div>
+      <div class="mouse-cursor cursor-inner"></div>
+      
+     <!-- skills -->
+      <div id="containerSkills">
+         <div class="about-title" data-aos="fade-down">
+            <div class="line"></div>
+            <h1> <img src="https://cdn.glitch.global/fb205773-9bd9-41e6-97d4-e2b4c3f811da/heartRemov.png?v=1670863702167" alt="" width="50"> my Certificates </h1>
+            <div class="line"></div>
+         </div>
+         <div id="skills">
+            <div data-aos="fade-up" class="box">
+               <img class="certificate" src="HTML.png" alt="" width="300px">
+            </div>
+            <div data-aos="fade-up" class="box">
+               <img class="certificate" src="Bootstrap.png" alt="" width="300px">
+            </div>
+            <div data-aos="fade-up" class="box">
+               <img class="certificate" src="Figma.png" alt="" width="300px">
+            </div>
+         </div>
       </div>
-    </div>
-    <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
-    </footer>
-  </body>
+      <!-- about me -->
+      <div class="about-title" data-aos="fade-down">
+         <div class="line"></div>
+         <h1> <img src="heartRemov.png" alt="" width="50"> about me </h1>
+         <div class="line"></div>
+      </div>
+      <div class="containerAboutMe">
+         <p class="parAboutMe">Hi there! My name is Marina, I am a web developer from Montenegro.
+            <br>I am currently learning React, Redux, Node. I try to make my projects
+            <br> interesting and advanced, and for this I am constantly expanding 
+            <br>my knowledge. And I really love what I do!
+         </p>
+      </div>
+      <!-- portfolio -->
+      <section class="containerPortfolio" id="portfolio">
+         <div class="portfolio">
+            <h3 class="heading"> PORTFOLIO</h3>
+         </div>
+         <div class="image-container">
+            <div class="projects_card">
+               <div class="image">
+                  <img src="Skiper.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">Landing page</p>
+                        <h4 class="projects__title">HTML5/CSS3/Gsap</h4>
+                        <div class="link">
+                           <a href="https://fishermans-project-me.glitch.me" class="button__small">
+                           <i class="bx bx-link"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="projects_card">
+               <div class="image">
+                  <img src="cake.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">Landing page</p>
+                        <h4 class="projects__title">HTML5/CSS3/Bootstrap/JS</h4>
+                        <div class="link">
+                           <a href="https://montecake-project-me.glitch.me" class="button__small" target="_blank">
+                           <i class="bx bx-link"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="projects_card">
+               <div class="image">
+                  <img src="wine.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">Landing page</p>
+                        <h4 class="projects__title">HTML5/CSS3/Bootstrap</h4>
+                        <div class="link">
+                           <a href="https://banakov-wine-me.glitch.me" class="button__small" target="_blank">
+                           <i class="bx bx-link"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="projects_card">
+               <div class="image">
+                  <img src="quiz.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">Quiz game</p>
+                        <h4 class="projects__title">HTML5/CSS3/Bootstrap/JS/Gsap</h4>
+                        <div class="link">
+                           <a href="https://language-quiz-me.glitch.me" class="button__small" target="_blank">
+                           <i class="bx bx-link"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="projects_card">
+               <div class="image">
+                  <img src="christmas.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">Countdown app</p>
+                        <h4 class="projects__title">HTML5/CSS3/JS/Gsap</h4>
+                        <div class="link">
+                           <a href="https://christmas-project-me.glitch.me" class="button__small" target="_blank">
+                           <i class="bx bx-link"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="projects_card">
+               <div class="image">
+                  <img src="slide2.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">Slide app</p>
+                        <h4 class="projects__title">HTML5/CSS3/JS</h4>
+                        <div class="link">
+                           <a href="https://slides1-project-me.glitch.me" class="button__small" target="_blank">
+                           <i class="bx bx-link"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="projects_card">
+               <div class="image">
+                  <img src="todolist.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">ToDoList app</p>
+                        <h4 class="projects__title">HTML5/CSS3/JS/Gsap</h4>
+                        <div class="link">
+                           <a href="https://todolist-project-me.glitch.me" class="button__small" target="_blank">
+                           <i class="bx bx-link"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="projects_card">
+               <div class="image">
+                  <img src="weather.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">Weather app</p>
+                        <h4 class="projects__title">HTML5/CSS3/JS/API</h4>
+                        <div class="link">
+                           <a href="https://weather-project-me.glitch.me" class="button__small" target="_blank">
+                           <i class="bx bx-link"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="projects_card">
+               <div class="image">
+                  <img src="magicBall.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">Magic Ball app</p>
+                        <h4 class="projects__title">HTML5/CSS3/JS/Gsap</h4>
+                        <div class="link">
+                           <a href="https://magic-ball-me.glitch.me" class="button__small" target="_blank">
+                              <i class="bx bx-link"></i>View
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="projects_card">
+            <div class="image"><img src="game.jpg" alt="cover">
+            <div class="projects__modal">
+            <div>
+            <p class="projects__subtitle">Game app</p>
+            <h4 class="projects__title">HTML5/CSS3/JS</h4>
+            <div class="link">
+            <a href="https://mygame-project-me.glitch.me" class="button__small" target="_blank">
+            <i class="bx bx-link"></i>View
+            </a>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="projects_card">
+               <div class="image">
+                  <img src="meditation.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">Meditation app</p>
+                        <h4 class="projects__title">HTML5/CSS3/JS/Gsap</h4>
+                        <div class="link">
+                           <a href="https://timer3-project-me.glitch.me" class="button__small" target="_blank">
+                           <i class="bx bx-link"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="projects_card">
+               <div class="image">
+                  <img src="search.jpg" alt="cover">
+                  <div class="projects__modal">
+                     <div>
+                        <p class="projects__subtitle">Recipes search app</p>
+                        <h4 class="projects__title">HTML5/CSS3/JS</h4>
+                        <div class="link">
+                           <a href="https://cooking-project-me.glitch.me" class="button__small" target="_blank">
+                           <i class="bx bx-link"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="down">
+            <a class="up" href="#up">
+               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+               </svg>
+            </a>
+         </div>
+      </section>
+      <footer>
+         <div class="about-title">
+            <p class="par">created by Marina Makarova 2022</p>
+         </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+      <script src="aos.js"></script>
+      <script src="script.js"></script>
+   </body>
 </html>

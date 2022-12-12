@@ -1,184 +1,352 @@
-/******************************************************************************
-START Glitch hello-app default styles
-
-The styles in this section do some minimal CSS resets, set default fonts and 
-colors, and handle the layout for our footer and "Remix on Glitch" button. If
-you're new to CSS they may seem a little complicated, but you can scroll down
-to this section's matching END comment to see page-specific styles.
-******************************************************************************/
-
-
-/* 
-  The style rules specify elements by type and by attributes such as class and ID
-  Each section indicates an element or elements, then lists the style properties to apply
-  See if you can cross-reference the rules in this file with the elements in index.html
-*/
-
-/* Our default values set as CSS variables */
-:root {
-  --color-bg: #69F7BE;
-  --color-text-main: #000000;
-  --color-primary: #FFFF00;
-  --wrapper-height: 87vh;
-  --image-max-width: 300px;
-  --image-margin: 3rem;
-  --font-family: "HK Grotesk";
-  --font-family-header: "HK Grotesk";
-}
-
-/* Basic page style resets */
-* {
-  box-sizing: border-box;
-}
-[hidden] {
-  display: none !important;
-}
-
-/* Import fonts */
-@font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
-}
-@font-face {
-  font-family: HK Grotesk;
-  font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
-}
-
-/* Our remix on glitch button */
-.btn--remix {
-  font-family: HK Grotesk;
-  padding: 0.75rem 1rem;
-  font-size: 1.1rem;
-  line-height: 1rem;
-  font-weight: 500;
-  height: 2.75rem;
-  align-items: center;
-  cursor: pointer;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #000;
-  white-space: nowrap;
-  margin-left: auto;
-}
-.btn--remix img {
-  margin-right: 0.5rem;
-}
-.btn--remix:hover {
-  background-color: #D0FFF1;
-}
-
-/* Navigation grid */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem auto 0;
-  padding: 1rem 0 0.75rem 0;
-  width: 100%;
-  flex-wrap: wrap;
-  border-top: 4px solid #fff;
-}
-
-.footer a:not(.btn--remix):link,
-a:not(.btn--remix):visited {
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.1rem;
-  color: #000;
-  text-decoration: none;
-  border-style: none;
-}
-.footer a:hover {
-  background: var(--color-primary);
-}
-
-.footer .links {
-  padding: 0.5rem 1rem 1.5rem;
-  white-space: nowrap;
-}
-
-.divider {
-  padding: 0 1rem;
-}
-/******************************************************************************
-END Glitch hello-app default styles
-******************************************************************************/
-
 body {
-  font-family: HK Grotesk;
-  background-color: var(--color-bg);
+background-image: url(bg.jpg);
+cursor: none;
 }
-
-/* Page structure */
-.wrapper {
-  min-height: var(--wrapper-height);
-  display: grid;
-  place-items: center;
-  margin: 0 1rem;
+a, span, button {
+cursor: none;
 }
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.circle {
+position: absolute;
+display: inline;
+border-radius: 28px;
+background: #7cb1ff;
+width: 56px;
+height: 56px;
+bottom: 10px;
+right: 100px;
 }
-
-/* Very light scaling for our illustration */
-.title {
-  color: #2800FF;
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 100px;
-  line-height: 105%;
-  margin: 0;
+.btnContact {
+font-size: 17px;
+font-weight: 500;
+letter-spacing: .15em;
+text-transform: uppercase;
+position: relative;
+font-family: 'Poppins', sans-serif;
 }
-
-/* Very light scaling for our illustration */
-.illustration {
-  max-width: 100%;
-  max-height: var(--image-max-width);
-  margin-top: var(--image-margin);
+.certificate:hover {
+transform: scale(1.5);
+transition: 2s;
 }
-
-/* Instructions */
-.instructions {
-  margin: 1rem auto 0;
+.par {
+font-family: 'Poppins', sans-serif;
 }
-
-/* Button - Add it from the README instructions */
-button,
-input {
-  font-family: inherit;
-  font-size: 100%;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  transition: 500ms;
+.parAboutMe {
+font-family: 'Poppins', sans-serif;
+font-size: 20px;
 }
-
-/* Subheading */
-h2 {
-  color: #2800FF;
+.languages, span, h1, h3 {
+font-size: 30px;
+font-weight: 500;
+letter-spacing: .15em;
+font-family: 'Poppins', sans-serif;
 }
-
-/* Interactive image */
-.illustration:active {
-  transform: translateY(5px);
+.textOne {
+font-weight: 500;
+letter-spacing: .15em;
+font-size: 30px;
+font-family: 'Poppins', sans-serif;
 }
-
-/* Button dip
-- Toggling this class on and off will move it down and up again
-- The button transition property above determines the speed of the translate (500ms)
-*/
-.dipped {
-  transform: translateY(5px);
+.text {
+font-weight: 500;
+letter-spacing: .15em;
+color: #540375;
+font-size: 40px;
+font-family: 'Poppins', sans-serif;
+}
+.myName {
+color: #540375;
+font-weight: 500;
+letter-spacing: .15em;
+font-size: 40px;
+font-family: 'Poppins', sans-serif;
+}
+label {
+font-family: 'Poppins', sans-serif;
+font-size: 18px;
+}
+.text-input {
+background-color: #f8f9fa;
+border: none;
+border-bottom: 2px solid #FF7000;
+padding: 10px 30px;
+}
+.btnSubmit {
+font-family: 'Poppins', sans-serif;
+font-size: 20px;
+background-color: #FF7000;
+border: none;
+border-radius: 30px;
+padding: 10px 30px;
+color: #fff;
+}
+.btnSubmit:hover {
+transform: scale(1.3);
+width: 100px;
+border: 2px solid #ffb200;
+}
+.headin {
+text-align: center;
+}
+.formBox {
+display: flex;
+justify-content: flex-end;
+margin-left: 200px;
+}
+.card {
+background-color: #f8f9fa;
+border: none;
+}
+.card:hover {
+transform: rotate(5deg);
+}
+header {
+position: sticky;
+top: 0;
+} 
+.containerAboutMe {
+display: flex;
+flex-direction: column;
+margin-left: 100px;
+}
+/* #logoOne {
+margin-right: 50px;
+} */
+/* #logoOne:hover {
+transform: rotate(3deg);
+} */
+.skills {
+text-align: center;
+background-color: #fff;
+border-radius: 40px;
+padding: 20px;
+box-shadow: 0px 8px 6px rgb(0 0 0 / 25%);
+margin-bottom: 50px;
+}
+.about {
+border: none;
+cursor: none;
+}
+.head {
+background-color: #ffb200;
+display: flex;
+justify-content: space-around;
+}
+.photoOne {
+border-radius: 50%;
+margin: 50px;
+box-shadow: 0px 8px 6px rgb(0 0 0 / 25%);
+align-self: center;
+}
+#aboutMe {
+margin-top: 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.languages {
+font-size: 20px;
+}
+.contact {
+margin: 10px;
+border-radius: 20px;
+}
+.contact:hover {
+transform: scale(1.3);
+border-radius: 50px;
+border: 2px solid #007cff;
+}
+.html, .css, .js, .react {
+background-color: #007cff;
+padding: 5px;
+border-radius: 10px;
+color: #fff;
+box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+/* .html, .css, .js, .react:hover {
+transform: rotate(3deg);
+}  */
+.bstrap, .gsap, .figma {
+background-color: #FF7000;
+padding: 5px;
+border-radius: 10px;
+color: #fff;
+box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+.boxes {
+font-size: 20px;
+}
+/* cursor */
+.mouse-cursor {
+position: fixed;
+left: 0;
+top: 0;
+pointer-events: none;
+border-radius: 50%;
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
+visibility: hidden; 
+}
+.cursor-inner {
+margin-left: 2px;
+margin-top: 2px;
+width: 10px;
+height: 10px;
+z-index: 10000001;
+background-color: #007cff;
+-webkit-transition: width .3s ease-in-out,
+height .3s ease-in-out,
+margin .3s ease-in-out,
+opacity .3s ease-in-out;
+-o-transition: width .3s ease-in-out,
+height .3s ease-in-out,
+margin .3s ease-in-out,
+opacity .3s ease-in-out;
+transition: width .3s ease-in-out,
+height .3s ease-in-out,
+margin .3s ease-in-out,
+opacity .3s ease-in-out; 
+}
+.cursor-inner.cursor-hover {
+margin-left: -30px;
+margin-top: -30px;
+width: 50px;
+height: 50px;
+background-color: #007cff;
+opacity: .3;
+}
+.cursor-outer {
+margin-left: -15px;
+margin-top: -15px;
+width: 50px;
+height: 50px;
+border: 1px solid #007cff;
+transition: .08s;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+z-index: 10000000;
+opacity: .5;
+}
+.cursor-outer.cursor-hover {
+opacity: 0; 
+}
+.heart {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+h1 {
+margin: 30px;
+}
+#skills, #containerPortfolio {
+display: flex;
+justify-content: space-around;
+margin-top: 20px;
+}
+.box {
+margin-bottom: 50px;
+}
+#containerSkills {
+background-color: white;
+}
+/* portfolio */
+.containerPortfolio .image-container {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+justify-content: center;
+padding: 10px;
+}
+.portfolio {
+display: flex;
+justify-content: center;
+}
+.heading {
+font-size: 40px;
+margin: 30px;
+}
+.containerPortfolio {
+min-height: 100vh;
+margin: 3rem 0 8rem 0;
+}
+.containerPortfolio .image-container .image {
+height: 350px;
+width: 450px;
+border: 3px solid #fff;
+box-shadow: 0 5px 15px rgba(0,0,0,.2);
+overflow: hidden;
+cursor: pointer;
+border-radius: 1rem;
+}
+.containerPortfolio .image-container .image img {
+height: 100%;
+width: 100%;
+object-fit:contain;
+transition: .2s linear;
+}
+.containerPortfolio .image-container .image:hover img{
+position: absolute; 
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+display: grid;
+align-items: flex-end;
+padding: 1.5rem 1.25rem;
+transition: .3s ease-in;
+opacity: 0;
+}
+.projects__card {
+position: relative;
+border-radius: 1rem;
+overflow: hidden;
+margin: 1rem;
+width: 100%;
+}
+.projects__modal{
+display: flex;
+justify-content: center;
+margin-top: 10rem;
+}
+.projects__subtitle, 
+.projects__title {
+color: var(--dark);
+text-align: center;
+}
+.projects__subtitle {
+font-size: 2rem;
+font-weight: 500;
+text-align: center;
+}
+.projects__title {
+font-size: 2rem;
+font-weight: 300;
+margin-bottom: .75rem;
+text-align: center;
+}
+.projects__modal a{
+color: #007cff;
+font-size: 1.5rem;
+}
+.projects__modal .link {
+display: flex;
+justify-content: center;
+}
+.line {
+width: 100px;
+height: 3px;
+background-color: #1f2335;
+margin-top: -10px;
+}
+.about-title {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.down {
+display: flex;
+justify-content: center;
+margin-top: 30px;
+}
+.up {
+color: #7cb1ff;
 }

@@ -1,27 +1,33 @@
-/*
-This is your site JavaScript code - you can add interactivity and carry out processing
-- Initially the JS writes a message to the console, and moves a button you can add from the README
-*/
+AOS.init();
 
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
+gsap.from('.boxes', {y:-20,  duration: 3, delay: 1.5, opacity: 0, stagger: .3, repeat: -1, repeatDelay: 3})
+gsap.from('.circle', {x: -300, duration: 3, delay: .5, opacity: 0})
+gsap.from('.photoOne', {y: -200, ease: 'bounce', duration: 5, delay: 1, opacity: 0})
+gsap.to('.text', {
+text: "a web developer.", 
+duration: 3,
+repeat: -1,
+ease: "power1.in",
+yoyo: true,
+delay: 2
+})
 
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the "Next steps" in the README
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-// Detect clicks on the button
-if (btn) {
-  btn.onclick = function() {
-    // The JS works in conjunction with the 'dipped' code in style.css
-    btn.classList.toggle("dipped");
-  };
+// cursor
+function mousecursor() {
+if ($("body")) {
+const e = document.querySelector(".cursor-inner"),
+t = document.querySelector(".cursor-outer");
+let n, i = 0,
+o = !1;
+window.onmousemove = function (s) {
+o || (t.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)"), e.style.transform = "translate(" + s.clientX + "px, " + s.clientY + "px)", n = s.clientY, i = s.clientX
+}, $("body").on("mouseenter", "a, .btnMenu, .cursor-pointer", function () {
+e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
+}), $("body").on("mouseleave", "a, .btnMenu, .cursor-pointer", function () {
+$(this).is("a, .btnMenu") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+}), e.style.visibility = "visible", t.style.visibility = "visible"
 }
-
-// This is a single line JS comment
-/*
-This is a comment that can span multiple lines 
-- use comments to make your own notes!
-*/
+};
+$(function () {
+mousecursor();
+});
