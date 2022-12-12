@@ -350,3 +350,62 @@ margin-top: 30px;
 .up {
 color: #7cb1ff;
 }
+
+@media all and (max-width: 500px) {
+  .about {
+    margin-top: 30px;
+    margin-left: 130px;
+  }
+  .circle {
+    left: 250px
+  }
+  .head {
+    flex-direction: column;
+  }
+  .photoOne {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 0;
+  }
+  svg {
+    width: 30px;
+    height: auto;
+  }
+  .textOne {
+    font-size: 25px;
+  }
+  .text {
+    font-size: 25px;
+  }
+  #aboutMe {
+    text-align: center;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .line {
+    
+  }
+  #skills {
+    flex-wrap: wrap;
+  }
+  .containerAboutMe {
+   padding: 20px;
+  margin: auto;
+  }
+  .heading {
+    font-size: 30px;
+  }
+  .formBox {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .card {
+    width: 200px;
+    align-self: center;
+  }
+  .checkEnd {
+    width: 50px;
+  }
+}
