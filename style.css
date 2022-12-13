@@ -102,18 +102,13 @@ transform: rotate(5deg);
 header {
 position: sticky;
 top: 0;
+z-index: 1  
 } 
 .containerAboutMe {
 display: flex;
 flex-direction: column;
 margin-left: 100px;
 }
-/* #logoOne {
-margin-right: 50px;
-} */
-/* #logoOne:hover {
-transform: rotate(3deg);
-} */
 .skills {
 text-align: center;
 background-color: #fff;
@@ -162,9 +157,6 @@ border-radius: 10px;
 color: #fff;
 box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
-/* .html, .css, .js, .react:hover {
-transform: rotate(3deg);
-}  */
 .bstrap, .gsap, .figma {
 background-color: #FF7000;
 padding: 5px;
