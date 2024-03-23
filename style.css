@@ -229,13 +229,23 @@ align-items: center;
 h1 {
 margin: 30px;
 }
-#skills, #containerPortfolio {
+.my-sertifacates {
+  margin-top: 30px;
+}
+#skills {
 display: flex;
+flex-wrap: wrap;
 justify-content: space-around;
 margin-top: 20px;
 }
 .box {
 margin-bottom: 50px;
+padding: 20px;
+}
+#containerPortfolio {
+display: flex;
+justify-content: space-around;
+margin-top: 20px;
 }
 #containerSkills {
 background-color: white;
@@ -333,6 +343,7 @@ margin-top: -10px;
 display: flex;
 align-items: center;
 justify-content: center;
+margin-top: 30px;
 }
 .down {
 display: flex;
