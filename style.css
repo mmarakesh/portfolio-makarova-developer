@@ -345,14 +345,11 @@ align-items: center;
 justify-content: center;
 margin-top: 30px;
 }
-.about-title-footer {
+.about-title {
 display: flex;
-flex-direction: column;
 align-items: center;
-margin-top: 10px;
-}
-.par-footer {
-font-family: 'Poppins', sans-serif;
+justify-content: center;
+margin-top: 30px;
 }
 .down {
 display: flex;
